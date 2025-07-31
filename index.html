@@ -3,49 +3,147 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1366, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyPortfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
-    <nav class="navbar">
-        <a href="#" class="logo">
-            <img src="https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/Logo-RevoU-5_1.original.png" alt="Logo">
-            <span>RevoU</span>
-        </a>
-
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Our Profile</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Message Us</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a href="#" class="logo d-flex align-items-center gap-2">
+                <img src="https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/Logo-RevoU-5_1.original.png"
+                    alt="Logo" height="30" />
+                <span class="fw-bold">RevoU</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">My Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Message Us</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <header class="hero">
-        <div class="text-hero">
-            <h1>Hi Fadlan, Welcome to website</h1>
-            <p>This is my first practice project - building something amazing together</p>
-            <button class="btn">Get Started</button>
+    <!-- Hero Section -->
+    <header class="hero position-relative">
+        <!-- Banner Image -->
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Banner" class="hero-banner w-100">
+
+        <!-- Overlay & Text -->
+        <div class="text-hero position-absolute top-50 start-50 translate-middle text-center WelcomeSpeech w-100 px-3 animate__animated animate__fadeIn">
+            <h1 class="display-4 animate__animated animate__fadeInDown">Hi <span id="name-Speech"></span>, Welcome to Website</h1>
+            <p class="lead animate__animated animate__fadeIn animate__delay-1s">This is my first practice project - building something amazing together</p>
+            <button class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-1s">Get Started</button>
         </div>
     </header>
-    <div class="headquarter-section">
-        <h2>Our Headquarter</h2>
-        <div class="headquarter-content">
-            <div class="headquarter-item">
-                <img src="https://ekaputrawisata.com/wp-content/uploads/2025/01/Where-is-Jakarta-Located-Explore-Indonesias-Capital-City.webp" alt="Headquarter Image">
-                <h3>Jakarta </h3>
+
+    <section class="ourprofile-section py-5 bg-light WelcomeSpeech">
+        <div class="container">
+            <h2 class="mb-4 fw-bold text-white text-center animate__animated animate__fadeIn">Our Profile</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <h2 class="fw-bold text-white">RevoU</h2>
+                    <p class="text-white">
+                        RevoU adalah platform pendidikan online yang berfokus pada pengembangan keterampilan digital untuk
+                        mempersiapkan individu memasuki dunia kerja di industri teknologi. Program-program RevoU mencakup
+                        bidang seperti Digital Marketing, Data Analytics, Software Engineering, dan Product Management.
+                        Dengan sistem belajar intensif berbasis proyek nyata, RevoU memberikan pengalaman pembelajaran yang
+                        relevan dengan kebutuhan industri. Para peserta belajar langsung dari praktisi berpengalaman,
+                        didukung dengan pelatihan soft skill serta persiapan karier seperti pembuatan CV, simulasi
+                        wawancara, dan networking dengan perusahaan mitra.
+                    </p>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <img src="https://galangmarufa.com/wp-content/uploads/2023/12/IMG_8071.jpg" alt="Team Photo"
+                        class="img-fluid rounded shadow-lg" style="max-height: 400px; width: 100%; object-fit: cover;">
+                </div>
             </div>
-            <div class="headquarter-item">
-                <img src="https://static.dw.com/image/44565755_605.jpg" alt="Headquarter Image">
-                <h3>Bandung</h3>
+        </div>
+    </section>
+
+    <!-- Message Us -->
+    <section class="messageUs-section py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <h3 class="text-center mb-4 animate__animated animate__fadeIn">Message Us</h3>
+                    <form onsubmit="handleSubmit(event)" class="p-3 p-md-4 rounded-3 custom-form animate__animated animate__fadeInUp">
+                        <div class="mb-3">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" class="form-control form-control-lg" id="nama"
+                                placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tanggal" class="form-label">Tanggal Lahir</label>
+                            <input type="date" class="form-control form-control-lg" id="tanggal" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Jenis Kelamin</label><br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="laki" value="Laki - Laki"
+                                    checked>
+                                <label class="form-check-label" for="laki">Laki-Laki</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="perempuan"
+                                    value="Perempuan">
+                                <label class="form-check-label" for="perempuan">Perempuan</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pesan" class="form-label">Pesan</label>
+                            <textarea class="form-control form-control-lg" id="pesan" rows="4"
+                                placeholder="Tulis pesan Anda..." required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-gradient">Kirim Pesan</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="headquarter-item">
-                <img src="https://awsimages.detik.net.id/community/media/visual/2024/10/11/penampakan-hari-tanpa-bayangan-di-kota-surabaya-pukul-1115-wib-jumat-11102024-5.jpeg?w=1200" alt="Headquarter Image">
-                <h3>Surabya</h3>
-            </div>
+        </div>
+    </section>
+
+    <div class="footer-section">
+        <footer class="bg-dark text-white py-4">
+            <div class="container text-center">
+                <p class="mb-2">&copy; 2025 MyPortfolio by RevoU Coding Camp</p>
+        </footer>
     </div>
+    <!-- Modal Output -->
+    <div class="modal fade" id="outputModal" tabindex="-1" aria-labelledby="outputModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="outputModalLabel">Hasil Pesan Anda</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Current time</strong>: <span id="currentTime">-</span></p>
+                    <p><strong>Nama</strong>: <span id="outputNama">-</span></p>
+                    <p><strong>Tanggal Lahir</strong>: <span id="outputTanggal">-</span></p>
+                    <p><strong>Jenis Kelamin</strong>: <span id="outputGender">-</span></p>
+                    <p><strong>Pesan</strong>: <span id="outputPesan">-</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
