@@ -13,96 +13,169 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container">
             <a href="#" class="logo d-flex align-items-center gap-2">
                 <img src="https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/Logo-RevoU-5_1.original.png"
-                    alt="Logo" height="30" />
+                    alt="RevoU Logo" />
                 <span class="fw-bold">RevoU</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">My Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Message Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ourprofile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#messageus">Message Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero position-relative">
-        <!-- Banner Image -->
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Banner" class="hero-banner w-100">
-
-        <!-- Overlay & Text -->
-        <div class="text-hero position-absolute top-50 start-50 translate-middle text-center WelcomeSpeech w-100 px-3 animate__animated animate__fadeIn">
-            <h1 class="display-4 animate__animated animate__fadeInDown">Hi <span id="name-Speech"></span>, Welcome to Website</h1>
-            <p class="lead animate__animated animate__fadeIn animate__delay-1s">This is my first practice project - building something amazing together</p>
-            <button class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-1s">Get Started</button>
+    <header id="hero" class="hero">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Technology workspace background"
+            class="hero-banner">
+        <div class="text-hero animate__animated animate__fadeIn">
+            <h1 class="animate__animated animate__fadeInDown">
+                Hi <span id="name-Speech">there</span>, Welcome to My Website
+            </h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">
+                This is my first practice project - building something amazing together
+            </p>
+            <button class="btn-hero animate__animated animate__fadeInUp animate__delay-1s">
+                Get Started
+            </button>
         </div>
     </header>
 
-    <section class="ourprofile-section py-5 bg-light WelcomeSpeech">
+    <!-- Profile Section -->
+    <section id="ourprofile" class="ourprofile-section">
         <div class="container">
-            <h2 class="mb-4 fw-bold text-white text-center animate__animated animate__fadeIn">Our Profile</h2>
-            <div class="row align-items-center">
+            <h2 class="text-center animate__animated animate__fadeIn">Our Profile</h2>
+            <div class="row align-items-center g-4">
                 <div class="col-lg-6 animate__animated animate__fadeInLeft">
-                    <h2 class="fw-bold text-white">RevoU</h2>
-                    <p class="text-white">
-                        RevoU adalah platform pendidikan online yang berfokus pada pengembangan keterampilan digital untuk
-                        mempersiapkan individu memasuki dunia kerja di industri teknologi. Program-program RevoU mencakup
-                        bidang seperti Digital Marketing, Data Analytics, Software Engineering, dan Product Management.
-                        Dengan sistem belajar intensif berbasis proyek nyata, RevoU memberikan pengalaman pembelajaran yang
-                        relevan dengan kebutuhan industri. Para peserta belajar langsung dari praktisi berpengalaman,
-                        didukung dengan pelatihan soft skill serta persiapan karier seperti pembuatan CV, simulasi
-                        wawancara, dan networking dengan perusahaan mitra.
-                    </p>
+                    <div class="profile-content">
+                        <h3>RevoU</h3>
+                        <p>
+                            RevoU adalah platform pendidikan online yang berfokus pada pengembangan keterampilan digital
+                            untuk
+                            mempersiapkan individu memasuki dunia kerja di industri teknologi. Program-program RevoU
+                            mencakup
+                            bidang seperti Digital Marketing, Data Analytics, Software Engineering, dan Product
+                            Management.
+                        </p>
+                        <p>
+                            Dengan sistem belajar intensif berbasis proyek nyata, RevoU memberikan pengalaman
+                            pembelajaran yang
+                            relevan dengan kebutuhan industri. Para peserta belajar langsung dari praktisi
+                            berpengalaman,
+                            didukung dengan pelatihan soft skill serta persiapan karier seperti pembuatan CV, simulasi
+                            wawancara, dan networking dengan perusahaan mitra.
+                        </p>
+                    </div>
                 </div>
                 <div class="col-lg-6 animate__animated animate__fadeInRight">
-                    <img src="https://galangmarufa.com/wp-content/uploads/2023/12/IMG_8071.jpg" alt="Team Photo"
-                        class="img-fluid rounded shadow-lg" style="max-height: 400px; width: 100%; object-fit: cover;">
+                    <img src="https://galangmarufa.com/wp-content/uploads/2023/12/IMG_8071.jpg"
+                        alt="RevoU team collaboration" class="profile-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Message Us -->
-    <section class="messageUs-section py-5 bg-light">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portofolio-section">
+        <div class="container">
+            <h2 class="text-center animate__animated animate__fadeIn">Portfolio</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card portfolio-card animate__animated animate__zoomIn">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80"
+                            class="card-img-top" alt="Website development project">
+                        <div class="card-body">
+                            <h5 class="card-title">Website Company Profile</h5>
+                            <p class="card-text">
+                                Membangun website company profile modern menggunakan HTML, CSS, dan Bootstrap
+                                untuk klien startup teknologi dengan desain responsif dan user-friendly.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <button class="btn btn-portfolio btn-sm">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card portfolio-card animate__animated animate__zoomIn animate__delay-1s">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                            class="card-img-top" alt="Todo application interface">
+                        <div class="card-body">
+                            <h5 class="card-title">Aplikasi To-Do List</h5>
+                            <p class="card-text">
+                                Aplikasi to-do list interaktif berbasis JavaScript untuk membantu pengguna
+                                mengatur tugas harian secara efisien dengan fitur tambah, edit, dan hapus.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <button class="btn btn-portfolio btn-sm">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card portfolio-card animate__animated animate__zoomIn animate__delay-2s">
+                        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+                            class="card-img-top" alt="Data analytics dashboard">
+                        <div class="card-body">
+                            <h5 class="card-title">Dashboard Data Analytics</h5>
+                            <p class="card-text">
+                                Membuat dashboard visualisasi data menggunakan Chart.js dan Bootstrap
+                                untuk analisis data penjualan dengan grafik interaktif dan real-time updates.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <button class="btn btn-portfolio btn-sm">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Us Section -->
+    <section id="messageus" class="messageUs-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-8">
-                    <h3 class="text-center mb-4 animate__animated animate__fadeIn">Message Us</h3>
-                    <form onsubmit="handleSubmit(event)" class="p-3 p-md-4 rounded-3 custom-form animate__animated animate__fadeInUp">
+                    <h3 class="text-center animate__animated animate__fadeIn">Message Us</h3>
+                    <form onsubmit="handleSubmit(event)" class="custom-form animate__animated animate__fadeInUp">
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama</label>
-                            <input type="text" class="form-control form-control-lg" id="nama"
-                                placeholder="Masukkan nama Anda" required>
+                            <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda" required>
                         </div>
                         <div class="mb-3">
                             <label for="tanggal" class="form-label">Tanggal Lahir</label>
-                            <input type="date" class="form-control form-control-lg" id="tanggal" required>
+                            <input type="date" class="form-control" id="tanggal" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Jenis Kelamin</label><br>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="laki" value="Laki - Laki"
-                                    checked>
-                                <label class="form-check-label" for="laki">Laki-Laki</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="perempuan"
-                                    value="Perempuan">
-                                <label class="form-check-label" for="perempuan">Perempuan</label>
+                            <label class="form-label">Jenis Kelamin</label>
+                            <div class="mt-2">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="laki"
+                                        value="Laki-Laki" checked>
+                                    <label class="form-check-label" for="laki">Laki-Laki</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="perempuan"
+                                        value="Perempuan">
+                                    <label class="form-check-label" for="perempuan">Perempuan</label>
+                                </div>
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="pesan" class="form-label">Pesan</label>
-                            <textarea class="form-control form-control-lg" id="pesan" rows="4"
-                                placeholder="Tulis pesan Anda..." required></textarea>
+                            <textarea class="form-control" id="pesan" rows="4" placeholder="Tulis pesan Anda..."
+                                required></textarea>
                         </div>
                         <div class="d-grid">
                             <button type="submit" class="btn btn-gradient">Kirim Pesan</button>
@@ -113,26 +186,28 @@
         </div>
     </section>
 
-    <div class="footer-section">
-        <footer class="bg-dark text-white py-4">
-            <div class="container text-center">
-                <p class="mb-2">&copy; 2025 MyPortfolio by RevoU Coding Camp</p>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container text-center">
+            <p>&copy; 2025 MyPortfolio by RevoU Coding Camp. All rights reserved.</p>
+        </div>
+    </footer>
+
     <!-- Modal Output -->
     <div class="modal fade" id="outputModal" tabindex="-1" aria-labelledby="outputModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="outputModalLabel">Hasil Pesan Anda</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Tutup"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Current time</strong>: <span id="currentTime">-</span></p>
-                    <p><strong>Nama</strong>: <span id="outputNama">-</span></p>
-                    <p><strong>Tanggal Lahir</strong>: <span id="outputTanggal">-</span></p>
-                    <p><strong>Jenis Kelamin</strong>: <span id="outputGender">-</span></p>
-                    <p><strong>Pesan</strong>: <span id="outputPesan">-</span></p>
+                    <p><strong>Waktu Saat Ini:</strong> <span id="currentTime">-</span></p>
+                    <p><strong>Nama:</strong> <span id="outputNama">-</span></p>
+                    <p><strong>Tanggal Lahir:</strong> <span id="outputTanggal">-</span></p>
+                    <p><strong>Jenis Kelamin:</strong> <span id="outputGender">-</span></p>
+                    <p><strong>Pesan:</strong> <span id="outputPesan">-</span></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
